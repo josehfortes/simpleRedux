@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 
-import App from './components/app';
-import reducers from './reducers';
+// create a new component. This component should produce some HTML
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+//React: create and manage our components
+//ReactDOM: render files
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+//api key: AIzaSyCbjKBxzrOZyXC5ARs6ZPpCMEliOzStAqU
+
+const API_KEY = 'AIzaSyCbjKBxzrOZyXC5ARs6ZPpCMEliOzStAqU'; //google API Key
+
+
+//every variable like const is the final value to this variable, dont change anymore
+const App = () => {
+    return <div>Hi</div>;
+}
+
+ReactDOM.render(<App />, document.querySelector('.container'));
